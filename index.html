@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Lardr — Privacy Policy</title>
+<style>
+  :root {
+    --paper: #FAF7F2;
+    --card:  #F2EFEA;
+    --divider: #E5E2DB;
+    --ink:   #1C1B19;
+    --ink-soft: #6B6863;
+    --brass: #A07B30;
+  }
+  * { box-sizing: border-box; }
+  html { -webkit-text-size-adjust: 100%; }
+  body {
+    margin: 0;
+    background: var(--paper);
+    color: var(--ink);
+    font-family: Georgia, "Times New Roman", serif;
+    line-height: 1.62;
+    font-size: 18px;
+  }
+  .wrap {
+    max-width: 720px;
+    margin: 0 auto;
+    padding: 56px 24px 96px;
+  }
+  header { margin-bottom: 40px; }
+  .wordmark {
+    font-size: 15px;
+    letter-spacing: 0.22em;
+    text-transform: uppercase;
+    font-weight: bold;
+    color: var(--brass);
+  }
+  h1 {
+    font-size: 36px;
+    line-height: 1.15;
+    margin: 14px 0 6px;
+    font-weight: bold;
+  }
+  .updated {
+    color: var(--ink-soft);
+    font-style: italic;
+    font-size: 15px;
+  }
+  .rule {
+    width: 48px;
+    height: 2px;
+    background: var(--brass);
+    border: 0;
+    margin: 22px 0 0;
+  }
+  h2 {
+    font-size: 22px;
+    margin: 40px 0 10px;
+    font-weight: bold;
+  }
+  p { margin: 0 0 16px; }
+  a { color: var(--brass); }
+  ul { margin: 0 0 16px; padding-left: 22px; }
+  li { margin-bottom: 8px; }
+  .lead {
+    font-size: 20px;
+    color: var(--ink);
+  }
+  .soft { color: var(--ink-soft); }
+  .callout {
+    background: var(--card);
+    border-left: 3px solid var(--brass);
+    border-radius: 4px;
+    padding: 16px 20px;
+    margin: 0 0 16px;
+  }
+  footer {
+    margin-top: 56px;
+    padding-top: 22px;
+    border-top: 1px solid var(--divider);
+    color: var(--ink-soft);
+    font-size: 15px;
+    font-style: italic;
+  }
+</style>
+</head>
+<body>
+  <div class="wrap">
+    <header>
+      <div class="wordmark">Lardr</div>
+      <h1>Privacy Policy</h1>
+      <p class="updated">Last updated: 29 May 2026</p>
+      <hr class="rule">
+    </header>
+
+    <p class="lead">Lardr is built on a simple idea: your recipes are yours. This policy explains exactly what data the app handles and where it goes — which, in most cases, is nowhere but your own device.</p>
+
+    <h2>The short version</h2>
+    <div class="callout">
+      <p style="margin:0;">Lardr has no servers and no account system. We do not collect, store, see, or have any access to your recipes, photos, meal plans, or shopping lists. Everything lives on your device, and — if you choose — in a folder you control.</p>
+    </div>
+
+    <h2>Data stored on your device</h2>
+    <p>Your recipes, meal plans, shopping lists, and saved photos are stored locally on your iPhone using Apple's on-device database (SwiftData).</p>
+    <p>You may also choose a folder — your iPhone's Files storage, iCloud Drive, Dropbox, or any other location you pick — where Lardr writes a copy of each recipe as a plain Markdown (<code>.md</code>) text file. That folder belongs to you. Lardr writes to it on your behalf; the data never passes through us.</p>
+
+    <h2>Third-party services you may choose to use</h2>
+    <p>Two optional features connect to outside services. Both are turned off by default and only work after you supply your own credentials. When you use them, data goes directly from your device to that service — never through any Lardr server, because there isn't one.</p>
+
+    <h3 style="font-size:18px;margin:24px 0 6px;">Anthropic (Claude AI)</h3>
+    <p>If you enable AI features, you provide your own Anthropic API key. When you import a recipe from a photo or a web link, the photo or page text is sent directly from your device to Anthropic, which returns the structured recipe to your device. The result is saved only on your device.</p>
+    <p class="soft">Anthropic's privacy policy: <a href="https://www.anthropic.com/legal/privacy">anthropic.com/legal/privacy</a></p>
+
+    <h3 style="font-size:18px;margin:24px 0 6px;">Notion</h3>
+    <p>If you enable Notion sync, you provide your own Notion integration token. Lardr reads recipes from the Notion database you choose, on your behalf, and adds new ones to your local collection. It never writes back to Notion.</p>
+    <p class="soft">Notion's privacy policy: <a href="https://www.notion.so/privacy">notion.so/privacy</a></p>
+
+    <h2>Your API keys and tokens</h2>
+    <p>Any credentials you enter (your Anthropic API key, your Notion token) are stored in the iOS Keychain on your device only. They are marked device-only, which means they are never transmitted off your device by Lardr and never synced through iCloud Keychain to other devices. You can remove them at any time in the app's Settings.</p>
+
+    <h2>No analytics, no tracking, no ads</h2>
+    <p>Lardr contains no analytics, no crash-reporting SDKs, no advertising, and no third-party tracking of any kind. We do not build a profile of you, and there is nothing to track you across other apps or websites.</p>
+
+    <h2>Children's privacy</h2>
+    <p>Lardr is not directed at children under 13 and does not knowingly collect personal information from anyone. Because the app collects no personal data at all, there is nothing of this kind to disclose, delete, or request.</p>
+
+    <h2>Changes to this policy</h2>
+    <p>If this policy changes, the "last updated" date above will change with it. Material changes will be reflected here before they take effect.</p>
+
+    <h2>Contact</h2>
+    <p>Questions about privacy, or about Lardr in general? Email <a href="mailto:lincolnljt@gmail.com">lincolnljt@gmail.com</a>.</p>
+
+    <footer>
+      Lardr — Your recipes. Your phone. Forever.
+    </footer>
+  </div>
+</body>
+</html>
