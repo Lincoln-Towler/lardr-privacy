@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Lardr — Support</title>
+<style>
+  :root {
+    --paper: #FAF7F2;
+    --card:  #F2EFEA;
+    --divider: #E5E2DB;
+    --ink:   #1C1B19;
+    --ink-soft: #6B6863;
+    --brass: #A07B30;
+  }
+  * { box-sizing: border-box; }
+  html { -webkit-text-size-adjust: 100%; }
+  body {
+    margin: 0;
+    background: var(--paper);
+    color: var(--ink);
+    font-family: Georgia, "Times New Roman", serif;
+    line-height: 1.62;
+    font-size: 18px;
+  }
+  .wrap {
+    max-width: 720px;
+    margin: 0 auto;
+    padding: 56px 24px 96px;
+  }
+  header { margin-bottom: 40px; }
+  .wordmark {
+    font-size: 15px;
+    letter-spacing: 0.22em;
+    text-transform: uppercase;
+    font-weight: bold;
+    color: var(--brass);
+  }
+  h1 {
+    font-size: 36px;
+    line-height: 1.15;
+    margin: 14px 0 6px;
+    font-weight: bold;
+  }
+  .updated {
+    color: var(--ink-soft);
+    font-style: italic;
+    font-size: 15px;
+  }
+  .rule {
+    width: 48px;
+    height: 2px;
+    background: var(--brass);
+    border: 0;
+    margin: 22px 0 0;
+  }
+  h2 {
+    font-size: 22px;
+    margin: 40px 0 10px;
+    font-weight: bold;
+  }
+  .q {
+    font-size: 19px;
+    font-weight: bold;
+    margin: 28px 0 4px;
+  }
+  p { margin: 0 0 16px; }
+  a { color: var(--brass); }
+  .lead { font-size: 20px; }
+  .soft { color: var(--ink-soft); }
+  .callout {
+    background: var(--card);
+    border-left: 3px solid var(--brass);
+    border-radius: 4px;
+    padding: 16px 20px;
+    margin: 0 0 16px;
+  }
+  footer {
+    margin-top: 56px;
+    padding-top: 22px;
+    border-top: 1px solid var(--divider);
+    color: var(--ink-soft);
+    font-size: 15px;
+    font-style: italic;
+  }
+  footer a { font-style: normal; }
+</style>
+</head>
+<body>
+  <div class="wrap">
+    <header>
+      <div class="wordmark">Lardr</div>
+      <h1>Support</h1>
+      <p class="updated">Plan · Shop · Cook</p>
+      <hr class="rule">
+    </header>
+
+    <p class="lead">Need a hand with Lardr? The fastest way to reach me is email — I read every message.</p>
+
+    <div class="callout">
+      <p style="margin:0;">Email <a href="mailto:lincolnljt@gmail.com">lincolnljt@gmail.com</a> with questions, bug reports, or feature ideas. Including your iPhone model and iOS version helps me track down anything that isn't behaving.</p>
+    </div>
+
+    <h2>Frequently asked</h2>
+
+    <p class="q">Do I need an account to use Lardr?</p>
+    <p>No. There's no sign-up and no login. Open the app and start adding recipes straight away.</p>
+
+    <p class="q">Where are my recipes stored?</p>
+    <p>On your iPhone. You can also pick a folder — your iPhone's Files storage, iCloud Drive, Dropbox, or anywhere else — where Lardr saves a copy of each recipe as a plain Markdown text file you fully own. If you ever stop using Lardr, those files stay readable in any text editor.</p>
+
+    <p class="q">How do I add recipes?</p>
+    <p>Four ways: type one in by hand, scan a photo of a recipe with your camera, paste a web link to import from a recipe site, or sync from a Notion database. Tap the <strong>+</strong> button on the Recipes tab to choose.</p>
+
+    <p class="q">How do the AI photo and link imports work?</p>
+    <p>AI parsing uses Anthropic's Claude. To enable it, add your own Anthropic API key in Settings (it stays on your device, in the iOS Keychain). Without a key, photo import still works using your iPhone's built-in on-device text recognition.</p>
+
+    <p class="q">How do I set up Notion sync?</p>
+    <p>In Notion, create an internal integration and connect it to your recipes database. Then, in Lardr's Settings, paste the integration token and the database link, and tap Sync. Lardr only ever adds new recipes — it never overwrites the ones you already have.</p>
+
+    <p class="q">How do I export my recipes or make a cookbook?</p>
+    <p>Every recipe is already exported as a Markdown file to your chosen folder. You can also export a single recipe as a PDF from its <strong>⋯</strong> menu, or bundle several into one cookbook PDF (with a cover and contents) via the <strong>+</strong> menu → "Select for cookbook."</p>
+
+    <p class="q">I think I found a bug.</p>
+    <p>Sorry about that — please email <a href="mailto:lincolnljt@gmail.com">lincolnljt@gmail.com</a> with what happened and what you expected, plus your iPhone model and iOS version if you can. I'll get on it.</p>
+
+    <footer>
+      Lardr — Your recipes. Your phone. Forever. · <a href="./">Privacy Policy</a>
+    </footer>
+  </div>
+</body>
+</html>
