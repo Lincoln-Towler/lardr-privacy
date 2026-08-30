@@ -59,6 +59,7 @@
     margin: 40px 0 10px;
     font-weight: bold;
   }
+  h3 { font-size: 18px; margin: 24px 0 6px; }
   p { margin: 0 0 16px; }
   a { color: var(--brass); }
   ul { margin: 0 0 16px; padding-left: 22px; }
@@ -91,46 +92,84 @@
     <header>
       <div class="wordmark">Lardr</div>
       <h1>Privacy Policy</h1>
-      <p class="updated">Last updated: 29 May 2026</p>
+      <p class="updated">Last updated: 30 August 2026</p>
       <hr class="rule">
     </header>
 
-    <p class="lead">Lardr is built on a simple idea: your recipes are yours. This policy explains exactly what data the app handles and where it goes — which, in most cases, is nowhere but your own device.</p>
+    <p class="lead">Lardr is built on a simple idea: your recipes are yours. This policy explains exactly what data the app handles and where it goes.</p>
 
     <h2>The short version</h2>
     <div class="callout">
-      <p style="margin:0;">Lardr has no servers and no account system. We do not collect, store, see, or have any access to your recipes, photos, meal plans, or shopping lists. Everything lives on your device, and — if you choose — in a folder you control.</p>
+      <p style="margin:0 0 12px;"><strong>Without a subscription, Lardr has no account and sends nothing anywhere.</strong> Your recipes, meal plans and shopping lists live on your device and — if you choose — in a folder you control. There is nothing for us to see.</p>
+      <p style="margin:0;"><strong>Lardr Pro adds optional cloud features</strong> — syncing across your devices, sharing with one other person, and AI recipe import. Those need an account and store your recipe data on our behalf. Everything below explains that in detail.</p>
     </div>
 
     <h2>Data stored on your device</h2>
-    <p>Your recipes, meal plans, shopping lists, and saved photos are stored locally on your iPhone using Apple's on-device database (SwiftData).</p>
-    <p>You may also choose a folder — your iPhone's Files storage, iCloud Drive, Dropbox, or any other location you pick — where Lardr writes a copy of each recipe as a plain Markdown (<code>.md</code>) text file. That folder belongs to you. Lardr writes to it on your behalf; the data never passes through us.</p>
+    <p>Your recipes, meal plans, shopping lists and saved photos are stored locally on your iPhone using Apple's on-device database (SwiftData). This is true whether or not you subscribe.</p>
+    <p>You may also choose a folder — your iPhone's Files storage, iCloud Drive, Dropbox, or any other location you pick — where Lardr writes a copy of each recipe as plain text (Markdown, Cooklang, or <code>.txt</code>). That folder belongs to you. Lardr writes to it on your behalf; the data never passes through us. This keeps working if you cancel Pro, or delete the app entirely.</p>
 
-    <h2>Third-party services you may choose to use</h2>
-    <p>Two optional features connect to outside services. Both are turned off by default and only work after you supply your own credentials. When you use them, data goes directly from your device to that service — never through any Lardr server, because there isn't one.</p>
+    <h2>Lardr Pro: accounts and cloud sync</h2>
+    <p>Lardr Pro is optional. If you never subscribe, none of this section applies to you.</p>
 
-    <h3 style="font-size:18px;margin:24px 0 6px;">Anthropic (Claude AI)</h3>
-    <p>If you enable AI features, you provide your own Anthropic API key. When you import a recipe from a photo or a web link, the photo or page text is sent directly from your device to Anthropic, which returns the structured recipe to your device. The result is saved only on your device.</p>
-    <p class="soft">Anthropic's privacy policy: <a href="https://www.anthropic.com/legal/privacy">anthropic.com/legal/privacy</a></p>
+    <h3>Your account</h3>
+    <p>Pro requires an account, created with <strong>Sign in with Apple</strong>. We receive an anonymous user identifier from Apple, and an email address — which is a private relay address if you chose "Hide My Email". We use it only to identify your account. We do not email you marketing.</p>
 
-    <h3 style="font-size:18px;margin:24px 0 6px;">Notion</h3>
-    <p>If you enable Notion sync, you provide your own Notion integration token. Lardr reads recipes from the Notion database you choose, on your behalf, and adds new ones to your local collection. It never writes back to Notion.</p>
+    <h3>What gets stored in the cloud</h3>
+    <p>So your data can reach your other devices, Pro stores the following on servers we operate (using <a href="https://supabase.com/privacy">Supabase</a>, hosted in Tokyo, Japan):</p>
+    <ul>
+      <li>Your recipes — including the text, ingredients, method, notes, and any hero photos you add</li>
+      <li>Your weekly meal plan</li>
+      <li>Your shopping list and saved staples</li>
+      <li>Your quick list</li>
+    </ul>
+    <p>This data is protected by row-level security rules so that only your account — and, if you use a household, the one person you share it with — can read or write it. We do not sell it, we do not analyse it, and we do not use it to train anything.</p>
+
+    <h3>Households</h3>
+    <p>A Household lets you share one recipe library, meal plan and shopping list with one other person. If you create or join a household, the recipes, plans and shopping items covered by it become visible to — and editable by — the other member. Photos attached to shared recipes are shared too. Your quick list stays private to you.</p>
+    <p>If you leave a household, the sharing stops: their content is removed from your device, and yours from theirs. Content each of you created remains owned by whoever made it.</p>
+
+    <h2>AI recipe import</h2>
+    <p>Lardr can read a recipe from a photo or a web link. How that works depends on how you use it:</p>
+    <ul>
+      <li><strong>On-device (no account needed).</strong> Photos are read using Apple's on-device text recognition. Nothing leaves your phone.</li>
+      <li><strong>With your own API key.</strong> If you supply your own Anthropic API key, the photo or page text goes directly from your device to Anthropic. It does not pass through us.</li>
+      <li><strong>With Lardr Pro.</strong> The photo or page text is sent to our server, which forwards it to <a href="https://www.anthropic.com/legal/privacy">Anthropic</a> using our key and returns the result to you. We do not keep the photo or the text after the request completes — we store only a monthly count of how many imports you have used, to enforce the fair-use limit.</li>
+    </ul>
+    <p>Anthropic does not train its models on data submitted through its API.</p>
+
+    <h2>Importing from a link</h2>
+    <p>When you paste a recipe link, or share a post to Lardr from another app, Lardr fetches that public web page from your device in order to read the recipe from it. This is the same thing your web browser would do when you open the link. The page's address is used only to fetch it and is saved with the recipe so you can return to the source.</p>
+
+    <h2>Subscriptions</h2>
+    <p>Subscriptions are purchased through Apple. Apple handles your payment; we never see your payment details. We use <a href="https://www.revenuecat.com/privacy">RevenueCat</a> to check whether your subscription is active — it receives your Lardr account identifier and your subscription status, and nothing else.</p>
+
+    <h2>Notion (optional)</h2>
+    <p>If you enable Notion sync, you provide your own Notion integration token. Lardr reads recipes from the Notion database you choose, on your behalf, and adds new ones to your collection. It never writes back to Notion.</p>
     <p class="soft">Notion's privacy policy: <a href="https://www.notion.so/privacy">notion.so/privacy</a></p>
 
     <h2>Your API keys and tokens</h2>
-    <p>Any credentials you enter (your Anthropic API key, your Notion token) are stored in the iOS Keychain on your device only. They are marked device-only, which means they are never transmitted off your device by Lardr and never synced through iCloud Keychain to other devices. You can remove them at any time in the app's Settings.</p>
+    <p>Any credentials you enter yourself — an Anthropic API key, a Notion token — are stored in the iOS Keychain on your device only. They are marked device-only, which means Lardr never transmits them off your device and they are never synced through iCloud Keychain. You can remove them at any time in Settings.</p>
+
+    <h2>Deleting your data</h2>
+    <p>You are always in control:</p>
+    <ul>
+      <li><strong>Delete individual content</strong> — deleting a recipe removes it from every device you are signed in on. Our servers keep a record of the deleted item so that the removal reaches your other devices; it is erased permanently when you delete your account.</li>
+      <li><strong>Stop syncing</strong> — sign out in Settings. Your data stays on your device and in your export folder.</li>
+      <li><strong>Delete your account</strong> — Settings → Cross-device sync → Delete Account. This permanently removes your account and everything stored for it on our servers, including recipe photos. Your local copies and your exported files are untouched and remain yours.</li>
+    </ul>
+    <p>You can also email us to request deletion, and we will action it.</p>
 
     <h2>No analytics, no tracking, no ads</h2>
-    <p>Lardr contains no analytics, no crash-reporting SDKs, no advertising, and no third-party tracking of any kind. We do not build a profile of you, and there is nothing to track you across other apps or websites.</p>
+    <p>Lardr contains no analytics, no crash-reporting SDKs, no advertising, and no third-party tracking of any kind. We do not build a profile of you, and nothing tracks you across other apps or websites.</p>
 
     <h2>Children's privacy</h2>
-    <p>Lardr is not directed at children under 13 and does not knowingly collect personal information from anyone. Because the app collects no personal data at all, there is nothing of this kind to disclose, delete, or request.</p>
+    <p>Lardr is not directed at children under 13 and we do not knowingly collect personal information from them. If you believe a child has created an account, email us and we will delete it.</p>
 
     <h2>Changes to this policy</h2>
     <p>If this policy changes, the "last updated" date above will change with it. Material changes will be reflected here before they take effect.</p>
 
     <h2>Contact</h2>
-    <p>Questions about privacy, or about Lardr in general? Email <a href="mailto:lincolnljt@gmail.com">lincolnljt@gmail.com</a>.</p>
+    <p>Questions about privacy, a data request, or about Lardr in general? Email <a href="mailto:lincolnljt@gmail.com">lincolnljt@gmail.com</a>.</p>
 
     <footer>
       Lardr — Your recipes. Your phone. Forever. · <a href="https://apps.apple.com/app/lardr/id6774364892">Get Lardr</a> · <a href="./support.html">Support</a>
